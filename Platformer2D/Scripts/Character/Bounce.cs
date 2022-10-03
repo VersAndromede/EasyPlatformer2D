@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Character), typeof(Rigidbody2D))]
 public class Bounce : MonoBehaviour
 {
     [SerializeField] private GroundChecker _groundChecker;
