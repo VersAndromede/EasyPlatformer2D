@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GroundChecker : MonoBehaviour
 {
+    [SerializeField] private float _extraJumpTime = 0.04f;
+
     private Coroutine _deactivateJumpJob;
 
     public bool IsGround { get; private set; }
@@ -39,7 +41,7 @@ public class GroundChecker : MonoBehaviour
 
     private IEnumerator DeactivateJump()
     {
-        yield return new WaitForSeconds(0.04f);
+        yield return new WaitForSeconds(_extraJumpTime);
         IsGround = false;
         IsJumpChanceUsed = true;
     }
