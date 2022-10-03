@@ -10,7 +10,6 @@ public class Wallet : MonoBehaviour
         {
             _balance++;
             coin.Collect();
-            Debug.Log(_balance);
         }
     }
 }
